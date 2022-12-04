@@ -1,4 +1,3 @@
-import logo from './logo.svg'
 import './App.css'
 import Cube from './Cube/Cube'
 import { createContext, useEffect, useState } from 'react'
@@ -22,6 +21,7 @@ function App() {
   let [text, setText] = useState('donelv')
   let [color, setColor] = useState('#f8ec24')
   let [isReady, setIsReady] = useState(false)
+  let [font, setFont] = useState('Aachenn')
   // let [theme, setTheme] = useState('light')
   // let toggleTheme = () => {
   //   setTheme((curr) => (curr === 'light' ? 'dark' : 'light'))
@@ -37,13 +37,13 @@ function App() {
   return (
     // <ThemeContext.Provider value={{ theme, toggleTheme }}>
     <div className="main" data-theme={theme}>
-      {isReady ? (
+      {!isReady ? (
         <>
           <button onClick={switchTheme} className="btn themeSwitcher">
             Light/Dark
           </button>
           <div className="wrapper">
-            <Cube text={text} color={color} />
+            <Cube text={text} color={color} font={font} />
             <div>
               <Input
                 value={text}
@@ -64,12 +64,40 @@ function App() {
                   onChange={(event) => setColor(event.currentTarget.value)}
                 />
               </div>
+              <div className="radioButtons">
+                <label className="radioButtons_label">Font</label>
+                <button
+                  onClick={() => {
+                    setFont('Aachenn')
+                  }}
+                  className="btn"
+                  style={{
+                    fontFamily: 'Aachenn',
+                    textDecoration: font === 'Aachenn' ? 'underline' : '',
+                  }}
+                >
+                  AACHENN
+                </button>
+                <button
+                  onClick={() => {
+                    setFont('Roboto')
+                  }}
+                  className="btn"
+                  style={{
+                    fontFamily: 'Roboto',
+                    textDecoration: font === 'Roboto' ? 'underline' : '',
+                  }}
+                >
+                  ROBOTO
+                </button>
+              </div>
             </div>
 
             <button
               onClick={() => {
                 setText('DONELV')
                 setColor('#f8ec24')
+                setFont('Aachenn')
               }}
               className="btn"
             >

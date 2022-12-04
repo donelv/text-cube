@@ -62,8 +62,9 @@
   font-family: 'AnonymousPro-Bold';
   transition: 0.2s;
 }
+
 @media (hover: hover) {
-  btn:hover {
+  .btn:hover {
     color: var(--background);
     background-color: var(--text-primary);
     border-color: var(--text-primary);
@@ -75,4 +76,26 @@
   top: 14px;
   right: 14px;
   width: 130px;
+}
+.radioButtons {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding: 12px;
+  border-radius: 2px;
+  border: 2px solid var(--text-secondary);
+}
+.radioButtons_label {
+  font-size: 16px;
+  font-family: 'AnonymousPro-Bold';
+  position: absolute;
+  left: 8px;
+  top: -8px;
+  color: var(--text-secondary);
+  pointer-events: none;
+  padding: 0 4px;
+  /* transition: all 0.5s ease, background-color 0.2s ease; */
+  transition: all 0.5s ease;
+  line-height: 100%;
+  background-color: var(--background);
 }

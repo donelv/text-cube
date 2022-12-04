@@ -10,9 +10,12 @@
   transform-style: preserve-3d;
   transform: rotateX(-40deg) rotateY(45deg);
   padding: 0px 10em 10em 0;
+  font-family: 'Aachenn';
 }
 
 .side {
+  /* border: 10px solid red; */
+  /* background-color: white; */
   position: absolute;
   display: flex;
   justify-content: center;
@@ -22,7 +25,7 @@
   border-radius: 0.6em;
   overflow: hidden;
   color: #f8ec24;
-  font-family: 'Aachenn';
+  /* font-family: 'Aachenn'; */
 }
 
 .front {
