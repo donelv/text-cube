@@ -1,0 +1,16 @@
+.colorPicker_wrapper {
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  border: 2px solid var(--text-secondary);
+  /* cursor: pointer; */
+  /* box-shadow: 1px 1px 3px 0px grey; */
+}
+.colorPicker {
+  cursor: pointer;
+  padding: 0;
+  width: 150%;
+  height: 150%;
+  margin: -25%;
+}

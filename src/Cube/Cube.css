@@ -1,0 +1,53 @@
+.cube_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 17em;
+  width: 15em;
+  font-size: 10px;
+}
+.cube {
+  transform-style: preserve-3d;
+  transform: rotateX(-40deg) rotateY(45deg);
+  padding: 0px 10em 10em 0;
+}
+
+.side {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10em;
+  height: 10em;
+  border-radius: 0.6em;
+  overflow: hidden;
+  color: #f8ec24;
+  font-family: 'Aachenn';
+}
+
+.front {
+  transform: translateZ(5.3em);
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(5.3em);
+}
+.wide {
+  transform: scaleY(1.6);
+  font-size: 8.4em;
+}
+.right {
+  transform: rotateY(90deg) translateZ(5.3em);
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(5.3em);
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(5.3em);
+}
+
+.back {
+  transform: rotateY(-180deg) translateZ(5.3em);
+}
