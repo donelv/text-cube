@@ -1,4 +1,5 @@
 .input_wraper {
+  flex: auto;
   position: relative;
   margin-bottom: 10px;
 }

@@ -80,15 +80,64 @@ function App() {
                 </button>
                 <button
                   onClick={() => {
-                    setFont('Roboto')
+                    setFont('Hanalei')
                   }}
                   className="btn"
                   style={{
-                    fontFamily: 'Roboto',
-                    textDecoration: font === 'Roboto' ? 'underline' : '',
+                    fontFamily: 'Hanalei',
+                    textDecoration: font === 'Hanalei' ? 'underline' : '',
                   }}
                 >
-                  ROBOTO
+                  Hanalei
+                </button>
+                <button
+                  onClick={() => {
+                    setFont('Permanent Marker')
+                  }}
+                  className="btn"
+                  style={{
+                    fontFamily: 'Permanent Marker',
+                    textDecoration:
+                      font === 'Permanent Marker' ? 'underline' : '',
+                  }}
+                >
+                  Permanent
+                </button>
+                <button
+                  onClick={() => {
+                    setFont('Gotish')
+                  }}
+                  className="btn"
+                  style={{
+                    fontFamily: 'Gotish',
+                    textDecoration: font === 'Gotish' ? 'underline' : '',
+                  }}
+                >
+                  Gotish
+                </button>
+                <button
+                  onClick={() => {
+                    setFont('GochiHand')
+                  }}
+                  className="btn"
+                  style={{
+                    fontFamily: 'GochiHand',
+                    textDecoration: font === 'GochiHand' ? 'underline' : '',
+                  }}
+                >
+                  GochiHand
+                </button>
+                <button
+                  onClick={() => {
+                    setFont('GoodDog')
+                  }}
+                  className="btn"
+                  style={{
+                    fontFamily: 'GoodDog',
+                    textDecoration: font === 'GoodDog' ? 'underline' : '',
+                  }}
+                >
+                  GoodDog
                 </button>
               </div>
             </div>
