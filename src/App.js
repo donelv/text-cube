@@ -29,10 +29,15 @@ function App() {
   // }
   useEffect(() => {
     Promise.all([
+      document.fonts.load('12px aachenn'),
       document.fonts.load('12px AnonymousPro-Regular'),
       document.fonts.load('12px AnonymousPro-Bold'),
-      document.fonts.load('12px aachenn'),
-      // document.fonts.load('italic 700 1em Lato')
+      document.fonts.load('12px PermanentMarker'),
+      document.fonts.load('12px Hanalei-Regular'),
+      document.fonts.load('12px HanaleiFill-Regular'),
+      document.fonts.load('12px GochiHand-Regular'),
+      document.fonts.load('12px GrenzeGotisch-Bold'),
+      document.fonts.load('12px gooddognew'),
     ]).then(() => setIsReady(true))
   }, [])
   return (
@@ -41,6 +46,18 @@ function App() {
         <>
           <button onClick={switchTheme} className="btn themeSwitcher">
             Light/Dark
+          </button>
+          <button
+            onClick={() => {
+              setIsRotating(!isRotating)
+            }}
+            className="btn spinSwitcher"
+          >
+            {isRotating ? (
+              <span style={{ color: '#f8ec24' }}>Spinnin'</span>
+            ) : (
+              <span>Spin</span>
+            )}
           </button>
           <div className="wrapper">
             <Cube text={text} color={color} font={font} rotating={isRotating} />
@@ -89,6 +106,18 @@ function App() {
                   }}
                 >
                   Hanalei
+                </button>
+                <button
+                  onClick={() => {
+                    setFont('HanaleiFill')
+                  }}
+                  className="btn"
+                  style={{
+                    fontFamily: 'HanaleiFill',
+                    textDecoration: font === 'HanaleiFill' ? 'underline' : '',
+                  }}
+                >
+                  HanaleiFill
                 </button>
                 <button
                   onClick={() => {
@@ -141,27 +170,16 @@ function App() {
                 </button>
               </div>
             </div>
-            <div className="radioButtons">
-              <label className="radioButtons_label">Settings</label>
-              <button
-                onClick={() => {
-                  setText('DONELV')
-                  setColor('#f8ec24')
-                  setFont('Aachenn')
-                }}
-                className="btn"
-              >
-                RESET
-              </button>
-              <button
-                onClick={() => {
-                  setIsRotating(!isRotating)
-                }}
-                className="btn"
-              >
-                {isRotating ? 'Stop' : 'Spin'}
-              </button>
-            </div>
+            <button
+              onClick={() => {
+                setText('DONELV')
+                setColor('#f8ec24')
+                setFont('Aachenn')
+              }}
+              className="btn"
+            >
+              RESET
+            </button>
           </div>
         </>
       ) : (
@@ -169,7 +187,6 @@ function App() {
       )}
     </div>
   )
-  // </ThemeContext.Provider>
 }
 
 export default App

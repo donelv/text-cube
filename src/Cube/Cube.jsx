@@ -9,42 +9,19 @@ const Cube = ({ text, color, font, rotating }) => {
     return el
   })
   let ref = useRef()
-  // let testFunc = (event) => {
-  //   // console.log(ref)
-  //   ref.current.className = 'cube'
-  // }
   useEffect(() => {
-    // console.log(ref)
-    // console.log(!rotating)
-    // ref.current.onanimationiteration(() => {
-    //   testFunc
-    // })
     if (!rotating) {
-      // ref.current.style.animationDuration = '1s'
       ref.current.onanimationiteration = () => {
         ref.current.className = 'cube'
       }
     } else {
-      // ref.current.style.animationDuration = '3s'
       ref.current.onanimationiteration = null
       ref.current.className = 'cube rotating'
     }
-    // else {
-    //   ref.current.onanimationiteration = null
-    // }
-    // ref.current.on('click', () => {
-    //   testFunc
-    // })
-    // ref.current.on('animationiteration webkitAnimationIteration', testFunc)
   }, [rotating])
   return (
     <div className="cube_wrapper">
-      <div
-        ref={ref}
-        // className={`cube ${rotating ? 'rotating' : ''}`}
-        className={'cube'}
-        style={{ fontFamily: font }}
-      >
+      <div ref={ref} className={'cube'} style={{ fontFamily: font }}>
         <div className="side front" style={{ color: color }}>
           <div className="wide">{`${splittedText[4]}${splittedText[5]}`}</div>
         </div>

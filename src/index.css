@@ -19,14 +19,9 @@ code {
   --text-primary: black;
   --text-secondary: #4a4a4a;
   --main-clr: #f8ec24;
-  /* --main-clr: #f8ec24; */
-  /* --second-clr: white; */
-  /* --accent: purple; */
 }
 [data-theme='dark'] {
   --background: black;
   --text-primary: white;
   --text-secondary: grey;
-
-  /* --accent: darkred; */
 }
