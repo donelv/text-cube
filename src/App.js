@@ -6,7 +6,7 @@ import ColorPicker from './ColorPicker/ColorPicker'
 import useLocalStorage from 'use-local-storage'
 import Loader from './Loader/Loader'
 // import ThemeSwitcher from './ThemeSwitcher/ThemeSwitcher'
-export const ThemeContext = createContext(null)
+// export const ThemeContext = createContext(null)
 
 function App() {
   const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -22,6 +22,7 @@ function App() {
   let [color, setColor] = useState('#f8ec24')
   let [isReady, setIsReady] = useState(false)
   let [font, setFont] = useState('Aachenn')
+  let [isRotating, setIsRotating] = useState(false)
   // let [theme, setTheme] = useState('light')
   // let toggleTheme = () => {
   //   setTheme((curr) => (curr === 'light' ? 'dark' : 'light'))
@@ -35,7 +36,6 @@ function App() {
     ]).then(() => setIsReady(true))
   }, [])
   return (
-    // <ThemeContext.Provider value={{ theme, toggleTheme }}>
     <div className="main" data-theme={theme}>
       {isReady ? (
         <>
@@ -43,7 +43,7 @@ function App() {
             Light/Dark
           </button>
           <div className="wrapper">
-            <Cube text={text} color={color} font={font} />
+            <Cube text={text} color={color} font={font} rotating={isRotating} />
             <div>
               <Input
                 value={text}
@@ -141,19 +141,27 @@ function App() {
                 </button>
               </div>
             </div>
-
-            <button
-              onClick={() => {
-                setText('DONELV')
-                setColor('#f8ec24')
-                setFont('Aachenn')
-              }}
-              className="btn"
-            >
-              RESET
-            </button>
-
-            {/* <ThemeSwitcher theme={theme} switchTheme={switchTheme} /> */}
+            <div className="radioButtons">
+              <label className="radioButtons_label">Settings</label>
+              <button
+                onClick={() => {
+                  setText('DONELV')
+                  setColor('#f8ec24')
+                  setFont('Aachenn')
+                }}
+                className="btn"
+              >
+                RESET
+              </button>
+              <button
+                onClick={() => {
+                  setIsRotating(!isRotating)
+                }}
+                className="btn"
+              >
+                {isRotating ? 'Stop' : 'Spin'}
+              </button>
+            </div>
           </div>
         </>
       ) : (
