@@ -120,6 +120,7 @@
   right: 14px;
   width: 130px;
   z-index: 10;
+  /* overflow: hidden; */
 }
 .radioButtons {
   position: relative;

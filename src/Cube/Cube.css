@@ -67,9 +67,9 @@
     transform: rotateX(-40deg) rotateY(45deg);
   }
   50% {
-    -webkit-transform: rotateX(-0deg) rotateY(225deg);
-    -o-transform: rotateX(-0deg) rotateY(225deg);
-    transform: rotateX(-0deg) rotateY(225deg);
+    -webkit-transform: rotateX(-0deg) rotateY(calc(1turn / 2 + 45deg));
+    -o-transform: rotateX(-0deg) rotateY(calc(1turn / 2 + 45deg));
+    transform: rotateX(-0deg) rotateY(calc(1turn / 2 + 45deg));
   }
   100% {
     -webkit-transform: rotateX(-40deg) rotateY(calc(1turn + 45deg));
@@ -86,11 +86,11 @@
     transform: rotateX(-40deg) rotateY(45deg);
   }
   50% {
-    -ms-transform: rotateX(-0deg) rotateY(225deg);
-    -moz-transform: rotateX(-0deg) rotateY(225deg);
-    -webkit-transform: rotateX(-0deg) rotateY(225deg);
-    -o-transform: rotateX(-0deg) rotateY(225deg);
-    transform: rotateX(-0deg) rotateY(225deg);
+    -ms-transform: rotateX(-0deg) rotateY(calc(1turn / 2 + 45deg));
+    -moz-transform: rotateX(-0deg) rotateY(calc(1turn / 2 + 45deg));
+    -webkit-transform: rotateX(-0deg) rotateY(calc(1turn / 2 + 45deg));
+    -o-transform: rotateX(-0deg) rotateY(calc(1turn / 2 + 45deg));
+    transform: rotateX(-0deg) rotateY(calc(1turn / 2 + 45deg));
   }
   100% {
     -ms-transform: rotateX(-40deg) rotateY(calc(1turn + 45deg));
