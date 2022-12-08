@@ -111,6 +111,31 @@
     transform: rotateX(-40deg) rotateY(calc(1turn + 45deg));
   }
 } */
+.rainbow.ro {
+  color: #fc7f00;
+}
+.rainbow.ro::first-letter {
+  color: #fe0000;
+}
+.rainbow.yg {
+  color: #00ff02;
+}
+.rainbow.yg::first-letter {
+  color: #ffff02;
+}
+.rainbow.bp {
+  color: #9e02ff;
+}
+.rainbow.bp::first-letter {
+  color: #007eff;
+}
+
+/* .rainbow {
+  color: red;
+} */
+.rainbow::first-letter {
+  color: green;
+}
 .rotating {
   -webkit-animation: rotating 3.5s linear infinite;
   -moz-animation: rotating 3.5s linear infinite;

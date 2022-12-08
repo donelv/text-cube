@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { useEffect } from 'react'
 import './Cube.css'
-const Cube = ({ text, color, font, rotating }) => {
+const Cube = ({ text, color, font, rotating, isRainbow }) => {
   let splittedText = text.toUpperCase().split('')
   splittedText.length = 6
   splittedText = [...splittedText].map((el) => {
@@ -22,23 +22,35 @@ const Cube = ({ text, color, font, rotating }) => {
   return (
     <div className="cube_wrapper">
       <div ref={ref} className={'cube'} style={{ fontFamily: font }}>
-        <div className="side front" style={{ color: color }}>
-          <div className="wide">{`${splittedText[4]}${splittedText[5]}`}</div>
+        <div className="side front " style={{ color: color }}>
+          <div
+            className={`wide ${isRainbow ? 'rainbow' : ''} bp`}
+          >{`${splittedText[4]}${splittedText[5]}`}</div>
         </div>
         <div className="side back" style={{ color: color }}>
-          <div className="wide">{`${splittedText[4]}${splittedText[5]}`}</div>
+          <div
+            className={`wide ${isRainbow ? 'rainbow' : ''} bp`}
+          >{`${splittedText[4]}${splittedText[5]}`}</div>
         </div>
         <div className="side right" style={{ color: color }}>
-          <div className="wide">{`${splittedText[2]}${splittedText[3]}`}</div>
+          <div
+            className={`wide ${isRainbow ? 'rainbow' : ''} yg`}
+          >{`${splittedText[2]}${splittedText[3]}`}</div>
         </div>
-        <div className="side left" style={{ color }}>
-          <div className="wide">{`${splittedText[2]}${splittedText[3]}`}</div>
+        <div className="side left " style={{ color }}>
+          <div
+            className={`wide ${isRainbow ? 'rainbow' : ''} yg`}
+          >{`${splittedText[2]}${splittedText[3]}`}</div>
         </div>
         <div className="side top" style={{ color }}>
-          <div className="wide">{`${splittedText[0]}${splittedText[1]}`}</div>
+          <div
+            className={`wide ${isRainbow ? 'rainbow' : ''} ro`}
+          >{`${splittedText[0]}${splittedText[1]}`}</div>
         </div>
         <div className="side bottom" style={{ color: color }}>
-          <div className="wide">{`${splittedText[0]}${splittedText[1]}`}</div>
+          <div
+            className={`wide ${isRainbow ? 'rainbow' : ''} ro`}
+          >{`${splittedText[0]}${splittedText[1]}`}</div>
         </div>
       </div>
     </div>

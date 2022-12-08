@@ -23,21 +23,22 @@ function App() {
   let [isReady, setIsReady] = useState(false)
   let [font, setFont] = useState('Aachenn')
   let [isRotating, setIsRotating] = useState(false)
+  let [isRainbow, setIsRainbow] = useState(false)
   // let [theme, setTheme] = useState('light')
   // let toggleTheme = () => {
   //   setTheme((curr) => (curr === 'light' ? 'dark' : 'light'))
   // }
   useEffect(() => {
     Promise.all([
-      document.fonts.load('12px aachenn'),
+      document.fonts.load('12px Aachenn'),
       document.fonts.load('12px AnonymousPro-Regular'),
       document.fonts.load('12px AnonymousPro-Bold'),
       document.fonts.load('12px PermanentMarker'),
-      document.fonts.load('12px Hanalei-Regular'),
-      document.fonts.load('12px HanaleiFill-Regular'),
-      document.fonts.load('12px GochiHand-Regular'),
-      document.fonts.load('12px GrenzeGotisch-Bold'),
-      document.fonts.load('12px gooddognew'),
+      document.fonts.load('12px Hanalei'),
+      document.fonts.load('12px HanaleiFill'),
+      document.fonts.load('12px GochiHand'),
+      document.fonts.load('12px Gotish'),
+      document.fonts.load('12px GoodDog'),
     ]).then(() => setIsReady(true))
   }, [])
   return (
@@ -60,7 +61,13 @@ function App() {
             )}
           </button>
           <div className="wrapper">
-            <Cube text={text} color={color} font={font} rotating={isRotating} />
+            <Cube
+              text={text}
+              color={color}
+              font={font}
+              rotating={isRotating}
+              isRainbow={isRainbow}
+            />
             <div>
               <Input
                 value={text}
@@ -121,13 +128,13 @@ function App() {
                 </button>
                 <button
                   onClick={() => {
-                    setFont('Permanent Marker')
+                    setFont('PermanentMarker')
                   }}
                   className="btn"
                   style={{
-                    fontFamily: 'Permanent Marker',
+                    fontFamily: 'PermanentMarker',
                     textDecoration:
-                      font === 'Permanent Marker' ? 'underline' : '',
+                      font === 'PermanentMarker' ? 'underline' : '',
                   }}
                 >
                   PERMANENT
@@ -179,6 +186,14 @@ function App() {
               className="btn"
             >
               Reset
+            </button>
+            <button
+              onClick={() => {
+                setIsRainbow(!isRainbow)
+              }}
+              className="btn"
+            >
+              Rainbow
             </button>
           </div>
         </>
