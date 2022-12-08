@@ -105,7 +105,7 @@ function App() {
                     textDecoration: font === 'Hanalei' ? 'underline' : '',
                   }}
                 >
-                  Hanalei
+                  HANALEI
                 </button>
                 <button
                   onClick={() => {
@@ -117,7 +117,7 @@ function App() {
                     textDecoration: font === 'HanaleiFill' ? 'underline' : '',
                   }}
                 >
-                  HanaleiFill
+                  HANALEIFILL
                 </button>
                 <button
                   onClick={() => {
@@ -130,7 +130,7 @@ function App() {
                       font === 'Permanent Marker' ? 'underline' : '',
                   }}
                 >
-                  Permanent
+                  PERMANENT
                 </button>
                 <button
                   onClick={() => {
@@ -142,7 +142,7 @@ function App() {
                     textDecoration: font === 'Gotish' ? 'underline' : '',
                   }}
                 >
-                  Gotish
+                  GOTISH
                 </button>
                 <button
                   onClick={() => {
@@ -154,7 +154,7 @@ function App() {
                     textDecoration: font === 'GochiHand' ? 'underline' : '',
                   }}
                 >
-                  GochiHand
+                  GOCHIHAND
                 </button>
                 <button
                   onClick={() => {
@@ -166,7 +166,7 @@ function App() {
                     textDecoration: font === 'GoodDog' ? 'underline' : '',
                   }}
                 >
-                  GoodDog
+                  GOODDOG
                 </button>
               </div>
             </div>
@@ -178,7 +178,7 @@ function App() {
               }}
               className="btn"
             >
-              RESET
+              Reset
             </button>
           </div>
         </>

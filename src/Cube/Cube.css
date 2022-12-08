@@ -60,16 +60,27 @@
 .back {
   transform: rotateY(-180deg) translateZ(5.3em);
 }
-@-webkit-keyframes rotating /* Safari and Chrome */ {
+/* @-webkit-keyframes */
+@keyframes rotating /* Safari and Chrome */ {
   0% {
     -webkit-transform: rotateX(-40deg) rotateY(45deg);
     -o-transform: rotateX(-40deg) rotateY(45deg);
     transform: rotateX(-40deg) rotateY(45deg);
   }
+  25% {
+    -webkit-transform: rotateX(-20deg) rotateY(135deg);
+    -o-transform: rotateX(-20deg) rotateY(135deg);
+    transform: rotateX(-20deg) rotateY(135deg);
+  }
   50% {
     -webkit-transform: rotateX(-0deg) rotateY(calc(1turn / 2 + 45deg));
     -o-transform: rotateX(-0deg) rotateY(calc(1turn / 2 + 45deg));
     transform: rotateX(-0deg) rotateY(calc(1turn / 2 + 45deg));
+  }
+  75% {
+    -webkit-transform: rotateX(-20deg) rotateY(calc(1turn - 45deg));
+    -o-transform: rotateX(-20deg) rotateY(calc(1turn - 45deg));
+    transform: rotateX(-20deg) rotateY(calc(1turn - 45deg));
   }
   100% {
     -webkit-transform: rotateX(-40deg) rotateY(calc(1turn + 45deg));
@@ -77,7 +88,7 @@
     transform: rotateX(-40deg) rotateY(calc(1turn + 45deg));
   }
 }
-@keyframes rotating {
+/* @keyframes rotating {
   0% {
     -ms-transform: rotateX(-40deg) rotateY(45deg);
     -moz-transform: rotateX(-40deg) rotateY(45deg);
@@ -99,7 +110,7 @@
     -o-transform: rotateX(-40deg) rotateY(calc(1turn + 45deg));
     transform: rotateX(-40deg) rotateY(calc(1turn + 45deg));
   }
-}
+} */
 .rotating {
   -webkit-animation: rotating 3.5s linear infinite;
   -moz-animation: rotating 3.5s linear infinite;
