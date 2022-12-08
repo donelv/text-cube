@@ -102,12 +102,7 @@
     border-color: var(--text-primary);
   }
 }
-@media (max-width: 455px) {
-  .wrapper {
-    margin-top: 120px;
-  }
-}
-.themeSwitcher {
+/* .themeSwitcher {
   position: fixed;
   top: 14px;
   right: 14px;
@@ -120,8 +115,8 @@
   right: 14px;
   width: 130px;
   z-index: 10;
-  /* overflow: hidden; */
-}
+  overflow: hidden;
+} */
 .radioButtons {
   position: relative;
   display: flex;
@@ -132,6 +127,7 @@
   border-radius: 2px;
   border: 2px solid var(--text-secondary);
   gap: 10px;
+  margin-bottom: 20px;
 }
 .radioButtons_label {
   font-size: 16px;

@@ -23,7 +23,7 @@ function App() {
   let [isReady, setIsReady] = useState(false)
   let [font, setFont] = useState('Aachenn')
   let [isRotating, setIsRotating] = useState(false)
-  let [isRainbow, setIsRainbow] = useState(false)
+  let [isGradient, setIsGradient] = useState(false)
   // let [theme, setTheme] = useState('light')
   // let toggleTheme = () => {
   //   setTheme((curr) => (curr === 'light' ? 'dark' : 'light'))
@@ -45,28 +45,13 @@ function App() {
     <div className="main" data-theme={theme}>
       {isReady ? (
         <>
-          <button onClick={switchTheme} className="btn themeSwitcher">
-            Light/Dark
-          </button>
-          <button
-            onClick={() => {
-              setIsRotating(!isRotating)
-            }}
-            className="btn spinSwitcher"
-          >
-            {isRotating ? (
-              <span style={{ color: '#f8ec24' }}>Spinnin'</span>
-            ) : (
-              <span>Spin</span>
-            )}
-          </button>
           <div className="wrapper">
             <Cube
               text={text}
               color={color}
               font={font}
               rotating={isRotating}
-              isRainbow={isRainbow}
+              isGradient={isGradient}
             />
             <div>
               <Input
@@ -176,25 +161,47 @@ function App() {
                   GOODDOG
                 </button>
               </div>
+              <div className="radioButtons">
+                <label className="radioButtons_label">Options</label>
+                <button onClick={switchTheme} className="btn">
+                  Light/Dark
+                </button>
+                <button
+                  onClick={() => {
+                    setIsRotating(!isRotating)
+                  }}
+                  className="btn"
+                >
+                  {isRotating ? (
+                    <span style={{ color: '#f8ec24' }}>Spinnin'</span>
+                  ) : (
+                    <span>Spin</span>
+                  )}
+                </button>
+                <button
+                  onClick={() => {
+                    setIsGradient(!isGradient)
+                  }}
+                  className="btn"
+                >
+                  <span className={`${isGradient ? 'gradientText' : ''}`}>
+                    Gradient
+                  </span>
+                </button>
+                <button
+                  onClick={() => {
+                    setText('DONELV')
+                    setColor('#f8ec24')
+                    setFont('Aachenn')
+                    setIsGradient(false)
+                    setIsRotating(false)
+                  }}
+                  className="btn"
+                >
+                  Reset
+                </button>
+              </div>
             </div>
-            <button
-              onClick={() => {
-                setText('DONELV')
-                setColor('#f8ec24')
-                setFont('Aachenn')
-              }}
-              className="btn"
-            >
-              Reset
-            </button>
-            <button
-              onClick={() => {
-                setIsRainbow(!isRainbow)
-              }}
-              className="btn"
-            >
-              Rainbow
-            </button>
           </div>
         </>
       ) : (
